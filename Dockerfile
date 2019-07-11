@@ -1,6 +1,6 @@
-FROM openjdk:8-jdk-stretch
+FROM dsouzai/jenkins:openjdk8-openj9-nightly
 
-RUN apt-get update && apt-get upgrade -y && apt-get install -y git curl && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get upgrade -y && apt-get install -y git curl gpg fontconfig vim && rm -rf /var/lib/apt/lists/*
 
 ARG user=jenkins
 ARG group=jenkins
